@@ -1,0 +1,32 @@
+# Bytecode and Compilation
+*.pyc
+__pycache__/
+.Python
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Virtual Environments
+.venv/
+venv/
+env/
+.env
+
+# Testing and Coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# OS and IDE Files
+.DS_Store
+thumbs.db
+.idea/
+.vscode/
+
+# Logs and Data
+*.log
+tmp/
+*.sqlite3
+
+./football_trajectory_prediction/data/processed/
