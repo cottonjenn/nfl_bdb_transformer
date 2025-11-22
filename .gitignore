@@ -29,4 +29,4 @@ thumbs.db
 tmp/
 *.sqlite3
 
-./football_trajectory_prediction/data/processed/
+football_trajectory_prediction/data/processed/
