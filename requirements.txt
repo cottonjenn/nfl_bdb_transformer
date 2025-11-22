@@ -1,0 +1,11 @@
+# PyTorch with CUDA 11.8 (for GTX 1080 Ti compatibility)
+# Install separately with: pip install torch==2.2.2 torchvision==0.17.2 torchaudio==2.2.2 --index-url https://download.pytorch.org/whl/cu118
+# torch==2.2.2+cu118
+# torchvision==0.17.2+cu118
+# torchaudio==2.2.2+cu118
+
+pandas>=1.5.0
+numpy>=1.23.0,<2.0.0
+matplotlib>=3.6.0
+pyarrow>=10.0.0
+
