@@ -1,6 +1,6 @@
 # NFL Big Data Bowl 2025/2026 – Player Trajectory Prediction
 
-In the NFL Big Data Bowl Prediction track, I built a custom PyTorch transformer model to forecast player positions frame-by-frame after the quarterback releases the ball, using pre-throw Next Gen Stats tracking data, targeted receiver info, and ball landing location. The model achieved competitive RMSE performance (~[your value, e.g., 1.15] yards) with realistic, interpretable trajectories that capture receiver adjustments and defensive closes.
+In the NFL Big Data Bowl Prediction track, I built a custom PyTorch transformer model to forecast player positions frame-by-frame after the quarterback releases the ball, using pre-throw Next Gen Stats tracking data, targeted receiver info, and ball landing location.
 
 ## Project Overview
 This repository contains my full end-to-end solution for the NFL Big Data Bowl Prediction competition (pass-air phase forecasting). Key components include:
