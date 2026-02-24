@@ -51,7 +51,3 @@ See the notebooks in the root or `src/` for exploration and inference examples.
 
 ## Links
 - Kaggle competition page: [https://www.kaggle.com/competitions/nfl-big-data-bowl-2025](https://www.kaggle.com/competitions/nfl-big-data-bowl-2026-prediction/overview)
-
-Feel free to fork, star, or open issues/PRs — happy to discuss improvements or extensions (e.g., multi-modal outputs, physics constraints)!
-
-Built with ❤️ using PyTorch, pandas, matplotlib.
