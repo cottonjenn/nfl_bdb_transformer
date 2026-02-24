@@ -17,11 +17,37 @@ The model excels at modeling multi-agent dynamics (e.g., coverage reactions, rou
 - Visualizations show realistic paths (see `visualizations/` folder)
 
 ## Repository Structure
-- `src/`: Model, dataset, loss, trainer, evaluator
-- `notebooks/`: Preprocessing, exploration, inference examples
-- `configs/`: Hyperparameters and feature lists
-- `reports/`: Evaluation CSVs, trajectory plots, error heatmaps
-- `data/`: (Do not commit raw data; use Kaggle paths)
+
+This repo is organized for easy navigation and reproducibility:
+
+- **src/** — Core source code
+  - `dataset.py` — Custom PyTorch Dataset with right-alignment, masking, and player mapping
+  - `model.py` — Encoder-decoder transformer with cross-player attention and conditioned decoder
+  - `loss.py` — Multi-component masked loss (position + velocity + final position)
+  - `trainer.py` — Training loop with warmup-cosine scheduler, gradient clipping, checkpointing
+  - `evaluator.py` — Yard-based metrics (RMSE, ADE, FDE) + denormalization
+  - `visualizer.py` — Field plots, multi-play grids, error heatmaps
+
+- **data/raw/** — Raw competition CSVs
+
+- **models/** — Saved model checkpoints
+
+- **reports/** — Evaluation results, trajectory visualizations, CSVs, plots
+
+- **config.py** — Central configuration: hyperparameters, feature lists, paths, constants
+
+- **main.py** — Entry point to run preprocessing, training, evaluation, or inference
+
+- **diagnose_*.py / debug_*.py** — Helper scripts for data quality and debugging (e.g., player mapping mismatches, trajectory issues)
+
+- **calculate_rmse.py** — Standalone RMSE calculator for quick checks
+
+The typical workflow:
+1. Run preprocessing → generates processed parquet files
+2. Train via `main.py --train`
+3. Evaluate/visualize via `main.py --eval` or `main.py --viz`
+
+See the notebooks in the root or `src/` for exploration and inference examples.
 
 ## Links
 - Kaggle competition page: [https://www.kaggle.com/competitions/nfl-big-data-bowl-2025](https://www.kaggle.com/competitions/nfl-big-data-bowl-2026-prediction/overview)
